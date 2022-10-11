@@ -2,6 +2,9 @@
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:AvaloniaUI.Ribbon;assembly=AvaloniaUI.Ribbon">
+  <Styles.Resources>
+    <local:ObjectToTemplateConverter x:Key="ObjectToTemplateConverter"/>
+  </Styles.Resources>
   <Design.PreviewWith>
     <Grid Height="90">
       <local:RibbonGroupBox Header="Group">
@@ -32,8 +35,8 @@
       <ControlTemplate>
         <Border Classes="RibbonToggleButtonBackgroundBorder">
           <DockPanel>
-            <TemplatedControl Template="{TemplateBinding Icon}" DockPanel.Dock="Left" />
-            <ContentPresenter Classes="MediumContentPresenter" Content="{TemplateBinding Content}" Margin="3,0,0,0" />
+            <TemplatedControl x:Name="PART_IconPresenter" Template="{TemplateBinding Icon, Converter={StaticResource ObjectToTemplateConverter}}" DockPanel.Dock="Left" />
+            <ContentPresenter x:Name="PART_ContentPresenter" Classes="MediumContentPresenter" Content="{TemplateBinding Content}" Margin="3,0,0,0" />
           </DockPanel>
         </Border>
       </ControlTemplate>
@@ -41,7 +44,7 @@
     <Setter Property="QuickAccessTemplate">
       <ControlTemplate>
         <ToggleButton Classes="quickAccessButton" Command="{Binding Command}" IsChecked="{Binding IsChecked}" CommandParameter="{Binding CommandParameter}" ToolTip.Tip="{Binding ToolTip.Tip}" local:KeyTip.KeyTipKeys="{Binding KeyTip.Tip}" MinWidth="45" Height="34" Focusable="False">
-          <TemplatedControl Template="{Binding QuickAccessIcon}" Width="16" Height="16"/>
+          <TemplatedControl x:Name="PART_IconPresenter" Template="{Binding QuickAccessIcon, Converter={StaticResource ObjectToTemplateConverter}}" Width="16" Height="16"/>
         </ToggleButton>
       </ControlTemplate>
     </Setter>
@@ -58,20 +61,23 @@
   </Style>
   <Style Selector="local|RibbonToggleButton[Size=Large]">
     <Setter Property="Padding" Value="9,4" />
-    <Setter Property="MaxWidth" Value="66"/>
+    <Setter Property="MaxWidth" Value="100"/>
     <Setter Property="Height" Value="72"/>
     <Setter Property="Template">
       <ControlTemplate>
         <Border Classes="RibbonToggleButtonBackgroundBorder">
           <DockPanel VerticalAlignment="Stretch">
-            <TemplatedControl Template="{TemplateBinding LargeIcon}" DockPanel.Dock="Top"/>
-            <ContentPresenter Content="{TemplateBinding Content}" Margin="0,3,0,0" VerticalAlignment="Stretch"/>
+            <TemplatedControl x:Name="PART_IconPresenter" Template="{TemplateBinding LargeIcon, Converter={StaticResource ObjectToTemplateConverter}}" DockPanel.Dock="Top" Width="32" Height="32"/>
+            <ContentPresenter x:Name="PART_ContentPresenter" Content="{TemplateBinding Content}" Margin="0,3,0,0" VerticalAlignment="Stretch"/>
           </DockPanel>
         </Border>
       </ControlTemplate>
     </Setter>
   </Style>
-  <Style Selector="local|RibbonToggleButton[Size=Large] /template/ ContentPresenter TextBlock">
+  <Style Selector="local|RibbonToggleButton TextBlock">
+    <Setter Property="FontSize" Value="12"/>
+  </Style>
+  <Style Selector="local|RibbonToggleButton[Size=Large] TextBlock">
     <Setter Property="TextWrapping" Value="Wrap"/>
     <Setter Property="TextAlignment" Value="Center"/>
     <Setter Property="Margin" Value="0,-3"/>
@@ -86,7 +92,7 @@
     <Setter Property="Template">
       <ControlTemplate>
         <Border Classes="RibbonToggleButtonBackgroundBorder">
-          <TemplatedControl Template="{TemplateBinding Icon}"/>
+          <TemplatedControl x:Name="PART_IconPresenter" Template="{TemplateBinding Icon, Converter={StaticResource ObjectToTemplateConverter}}"/>
         </Border>
       </ControlTemplate>
     </Setter>
@@ -109,11 +115,60 @@
     <Setter Property="CornerRadius" Value="{DynamicResource ControlCornerRadius}" />
   </Style>
   <Style Selector="local|RibbonToggleButton:pointerover /template/ Border.RibbonToggleButtonBackgroundBorder">
-    <Setter Property="Background" Value="{DynamicResource ButtonBackgroundPointerOver}" />
-    <Setter Property="BorderBrush" Value="{DynamicResource ButtonBorderBrushPointerOver}" />
+    <Setter Property="Background" Value="{DynamicResource ToggleButtonBackgroundPointerOver}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource ToggleButtonBorderBrushPointerOver}" />
   </Style>
   <Style Selector="local|RibbonToggleButton:pressed /template/ Border.RibbonToggleButtonBackgroundBorder">
-    <Setter Property="Background" Value="{DynamicResource ButtonBackgroundDisabled}" />
-    <Setter Property="BorderBrush" Value="{DynamicResource ButtonBorderBrushDisabled}" />
+    <Setter Property="Background" Value="{DynamicResource ToggleButtonBackgroundPressed}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource ToggleButtonBorderBrushPressed}" />
+  </Style>
+  <Style Selector="local|RibbonToggleButton:disabled /template/ Border.RibbonToggleButtonBackgroundBorder">
+    <Setter Property="Background" Value="{DynamicResource ToggleButtonBackgroundDisabled}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource ToggleButtonBorderBrushDisabled}" />
+  </Style>
+  <Style Selector="local|RibbonToggleButton:checked /template/ Border.RibbonToggleButtonBackgroundBorder">
+    <Setter Property="Background" Value="{DynamicResource ToggleButtonBackgroundChecked}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource ToggleButtonBorderBrushChecked}" />
+  </Style>
+  <Style Selector="local|RibbonToggleButton:checked:pointerover /template/ Border.RibbonToggleButtonBackgroundBorder">
+    <Setter Property="Background" Value="{DynamicResource ToggleButtonBackgroundCheckedPointerOver}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource ToggleButtonBorderBrushCheckedPointerOver}" />
+  </Style>
+  <Style Selector="local|RibbonToggleButton:checked:pressed /template/ Border.RibbonToggleButtonBackgroundBorder">
+    <Setter Property="Background" Value="{DynamicResource ToggleButtonBackgroundCheckedPressed}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource ToggleButtonBorderBrushCheckedPressed}" />
+  </Style>
+  <Style Selector="local|RibbonToggleButton:checked:disabled /template/ Border.RibbonToggleButtonBackgroundBorder">
+    <Setter Property="Background" Value="{DynamicResource ToggleButtonBackgroundCheckedDisabled}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource ToggleButtonBorderBrushCheckedDisabled}" />
+  </Style>
+
+  <Style Selector="local|RibbonToggleButton:pointerover /template/ ContentPresenter#PART_ContentPresenter,
+                   local|RibbonToggleButton:pointerover /template/ TemplatedControl#PART_IconPresenter">
+    <Setter Property="TextBlock.Foreground" Value="{DynamicResource ToggleButtonForegroundPointerOver}" />
+  </Style>
+  <Style Selector="local|RibbonToggleButton:pressed  /template/ ContentPresenter#PART_ContentPresenter,
+                   local|RibbonToggleButton:pressed /template/ TemplatedControl#PART_IconPresenter">
+    <Setter Property="TextBlock.Foreground" Value="{DynamicResource ToggleButtonForegroundPressed}" />
+  </Style>
+  <Style Selector="local|RibbonToggleButton:disabled /template/ ContentPresenter#PART_ContentPresenter,
+                   local|RibbonToggleButton:disabled /template/ TemplatedControl#PART_IconPresenter">
+    <Setter Property="TextBlock.Foreground" Value="{DynamicResource ToggleButtonForegroundDisabled}" />
+  </Style>
+  <Style Selector="local|RibbonToggleButton:checked /template/ ContentPresenter#PART_ContentPresenter,
+                   local|RibbonToggleButton:checked /template/ TemplatedControl#PART_IconPresenter">
+    <Setter Property="TextBlock.Foreground" Value="{DynamicResource ToggleButtonForegroundChecked}" />
+  </Style>
+  <Style Selector="local|RibbonToggleButton:checked:pointerover /template/ ContentPresenter#PART_ContentPresenter,
+                   local|RibbonToggleButton:checked:pointerover /template/ TemplatedControl#PART_IconPresenter">
+    <Setter Property="TextBlock.Foreground" Value="{DynamicResource ToggleButtonForegroundCheckedPointerOver}" />
+  </Style>
+  <Style Selector="local|RibbonToggleButton:checked:pressed /template/ ContentPresenter#PART_ContentPresenter,
+                   local|RibbonToggleButton:checked:pressed /template/ TemplatedControl#PART_IconPresenter">
+    <Setter Property="TextBlock.Foreground" Value="{DynamicResource ToggleButtonForegroundCheckedPressed}" />
+  </Style>
+  <Style Selector="local|RibbonToggleButton:checked:disabled /template/ ContentPresenter#PART_ContentPresenter,
+                   local|RibbonToggleButton:checked:disabled /template/ TemplatedControl#PART_IconPresenter">
+    <Setter Property="TextBlock.Foreground" Value="{DynamicResource ToggleButtonForegroundCheckedDisabled}" />
   </Style>
 </Styles>
