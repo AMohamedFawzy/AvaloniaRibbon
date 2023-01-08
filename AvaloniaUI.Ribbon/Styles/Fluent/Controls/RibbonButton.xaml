@@ -11,18 +11,8 @@
         <StackPanel Orientation="Horizontal" Spacing="10">
           <local:RibbonButton Content="Large Ribbon Button">
             <local:RibbonButton.LargeIcon>
-              <Image Source="/Assets/settings.png" Width="32" Height="32"/>
+              <Image Source="/Assets/png-image.png" Width="48" Height="48"/>
             </local:RibbonButton.LargeIcon>
-          </local:RibbonButton>
-          <local:RibbonButton Size="Medium" Content="Medium Ribbon Button">
-            <local:RibbonButton.Icon>
-              <Image Source="/Assets/settings.png" Width="16" Height="16"/>
-            </local:RibbonButton.Icon>
-          </local:RibbonButton>
-          <local:RibbonButton Size="Small" Content="Small Ribbon Button">
-            <local:RibbonButton.Icon>
-              <Image Source="/Assets/settings.png" Width="16" Height="16"/>
-            </local:RibbonButton.Icon>
           </local:RibbonButton>
         </StackPanel>
       </local:RibbonGroupBox>
@@ -61,6 +51,7 @@
   </Style>
   <Style Selector="local|RibbonButton[Size=Large]">
     <Setter Property="Padding" Value="9,4" />
+    <Setter Property="Margin" Value="2 0"/>
     <Setter Property="MaxWidth" Value="100"/>
     <Setter Property="Height" Value="72"/>
     <Setter Property="Template">
@@ -171,6 +162,9 @@
   <Style Selector="local|RibbonButton:checked:pointerover /template/ ContentPresenter#PART_ContentPresenter,
                    local|RibbonButton:checked:pointerover /template/ TemplatedControl#PART_IconPresenter">
     <Setter Property="TextBlock.Foreground" Value="{DynamicResource ButtonForegroundCheckedPointerOver}" />
+  </Style>
+  <Style Selector="local|RibbonButton:disabled /template/ TemplatedControl#PART_IconPresenter">
+    <Setter Property="Opacity" Value="0.2" />
   </Style>
   <Style Selector="local|RibbonButton:checked:pressed /template/ ContentPresenter#PART_ContentPresenter,
                    local|RibbonButton:checked:pressed /template/ TemplatedControl#PART_IconPresenter">
