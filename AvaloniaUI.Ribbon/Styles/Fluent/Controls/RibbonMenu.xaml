@@ -30,8 +30,8 @@
                           HorizontalAlignment="Stretch"
                           VerticalAlignment="Stretch"
                           IsChecked="{Binding IsMenuOpen, RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=TwoWay}"/>
-          <Popup x:Name="MenuPopup" PlacementTarget="{Binding #ContentButton}" PlacementMode="Bottom" VerticalOffset="-30" HorizontalOffset="0" StaysOpen="False" IsOpen="{Binding IsMenuOpen, RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=TwoWay}" Width="500" MinHeight="300">
-            <Border x:Name="MenuRootBorder" Background="{DynamicResource MenuFlyoutPresenterBackground}" BorderBrush="{DynamicResource MenuFlyoutPresenterBorderBrush}" BorderThickness="{DynamicResource MenuFlyoutPresenterBorderThemeThickness}" CornerRadius="{DynamicResource OverlayCornerRadius}" TextBlock.Foreground="{DynamicResource ThemeForegroundBrush}">
+          <Popup x:Name="MenuPopup" PlacementTarget="{Binding #ContentButton}" PlacementMode="Bottom" VerticalOffset="-30" HorizontalOffset="0" IsLightDismissEnabled="False" IsOpen="{Binding IsMenuOpen, RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=TwoWay}" Width="500" MinHeight="300">
+            <Border x:Name="MenuRootBorder" Background="{DynamicResource MenuFlyoutPresenterBackground}" BorderBrush="{DynamicResource MenuFlyoutPresenterBorderBrush}" BorderThickness="{DynamicResource MenuFlyoutPresenterBorderThemeThickness}" CornerRadius="{DynamicResource OverlayCornerRadius}" >
             <!--BoxShadow="0 4 10 #40000000"-->
               <DockPanel>
                 <DockPanel Name="MenuRightColumnDockPanel" Width="200" DockPanel.Dock="Right">
@@ -219,7 +219,7 @@
                   Margin="10,0,0,0"
                   VerticalAlignment="Center"
                   Grid.Column="3"/>
-            <Popup Name="PART_Popup" Width="200" PlacementMode="Left" StaysOpen="False"
+            <Popup Name="PART_Popup" Width="200" PlacementMode="Left" IsLightDismissEnabled="False"
                    IsOpen="{TemplateBinding IsSubMenuOpen, Mode=TwoWay}">
               <Border>
                 <ScrollViewer>

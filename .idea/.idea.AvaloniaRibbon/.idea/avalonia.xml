@@ -5,17 +5,33 @@
       <map>
         <entry key="AvaloniaUI.Ribbon.Sample/App.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
         <entry key="AvaloniaUI.Ribbon.Sample/Views/MainRibbon.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
+        <entry key="AvaloniaUI.Ribbon.Sample/Views/MainWindow.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
         <entry key="AvaloniaUI.Ribbon.Sample/Views/RibbonTabs/ButtonsTab.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
+        <entry key="AvaloniaUI.Ribbon.Sample/Views/RibbonTabs/ContextualTabGroup1.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
+        <entry key="AvaloniaUI.Ribbon.Sample/Views/RibbonTabs/GalleriesTab.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
         <entry key="AvaloniaUI.Ribbon.Sample/Views/RibbonTabs/HomeTab.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
         <entry key="AvaloniaUI.Ribbon/Locale/en-ca.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
         <entry key="AvaloniaUI.Ribbon/Locale/te-st.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
+        <entry key="AvaloniaUI.Ribbon/Styles/Default/AvaloniaRibbon.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
+        <entry key="AvaloniaUI.Ribbon/Styles/Default/Controls/Gallery.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
+        <entry key="AvaloniaUI.Ribbon/Styles/Default/Controls/Ribbon.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
         <entry key="AvaloniaUI.Ribbon/Styles/Default/Controls/RibbonButton.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
+        <entry key="AvaloniaUI.Ribbon/Styles/Default/Controls/RibbonContextualTabGroup.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
+        <entry key="AvaloniaUI.Ribbon/Styles/Default/Controls/RibbonDropDownButton.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
+        <entry key="AvaloniaUI.Ribbon/Styles/Default/Controls/RibbonGroupBox.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
         <entry key="AvaloniaUI.Ribbon/Styles/Default/Controls/RibbonMenu.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
+        <entry key="AvaloniaUI.Ribbon/Styles/Default/Controls/RibbonSplitButton.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
+        <entry key="AvaloniaUI.Ribbon/Styles/Default/Controls/RibbonWindow.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
+        <entry key="AvaloniaUI.Ribbon/Styles/Default/Res.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
         <entry key="AvaloniaUI.Ribbon/Styles/Fluent/AvaloniaRibbon.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
+        <entry key="AvaloniaUI.Ribbon/Styles/Fluent/Controls/Gallery.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
         <entry key="AvaloniaUI.Ribbon/Styles/Fluent/Controls/Ribbon.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
         <entry key="AvaloniaUI.Ribbon/Styles/Fluent/Controls/RibbonButton.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
+        <entry key="AvaloniaUI.Ribbon/Styles/Fluent/Controls/RibbonContextualTabGroup.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
+        <entry key="AvaloniaUI.Ribbon/Styles/Fluent/Controls/RibbonDropDownButton.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
         <entry key="AvaloniaUI.Ribbon/Styles/Fluent/Controls/RibbonGroupBox.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
         <entry key="AvaloniaUI.Ribbon/Styles/Fluent/Controls/RibbonMenu.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
+        <entry key="AvaloniaUI.Ribbon/Styles/Fluent/Controls/RibbonSplitButton.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
         <entry key="AvaloniaUI.Ribbon/Styles/Fluent/Controls/RibbonTab.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
         <entry key="AvaloniaUI.Ribbon/Styles/Fluent/Controls/RibbonToggleButton.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />
         <entry key="AvaloniaUI.Ribbon/Styles/Fluent/Controls/RibbonWindow.xaml" value="AvaloniaUI.Ribbon.Sample/AvaloniaUI.Ribbon.Sample.csproj" />

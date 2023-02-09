@@ -21,12 +21,12 @@
                           Foreground="{TemplateBinding Foreground}"
                           Content="{TemplateBinding Content}"
                           Padding="{TemplateBinding Padding}"
-                          TextBlock.FontWeight="SemiBold"
+                          FontWeight="SemiBold"
                           HorizontalContentAlignment="Center"
                           VerticalContentAlignment="Center"
                           IsChecked="{Binding IsMenuOpen, RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=TwoWay}"/>
-          <Popup PlacementTarget="{Binding #ContentButton}" PlacementMode="Bottom" VerticalOffset="-34" StaysOpen="False" IsOpen="{Binding IsMenuOpen, RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=TwoWay}" Width="500" MinHeight="300">
-            <Border Background="{DynamicResource ThemeBackgroundBrush}" BorderBrush="{DynamicResource ThemeBorderHighBrush}" BorderThickness="{DynamicResource ThemeBorderThickness}" TextBlock.Foreground="{DynamicResource ThemeForegroundBrush}">
+          <Popup PlacementTarget="{Binding #ContentButton}" PlacementMode="Bottom" VerticalOffset="-34" IsLightDismissEnabled="False" IsOpen="{Binding IsMenuOpen, RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=TwoWay}" Width="500" MinHeight="300">
+            <Border Background="{DynamicResource ThemeBackgroundBrush}" BorderBrush="{DynamicResource ThemeBorderHighBrush}" BorderThickness="{DynamicResource ThemeBorderThickness}">
               <DockPanel>
                 <DockPanel Name="MenuRightColumnDockPanel" Width="200" DockPanel.Dock="Right">
                   <Grid Height="34" DockPanel.Dock="Top" IsVisible="{Binding !HasSelectedItem, RelativeSource={RelativeSource Mode=TemplatedParent}}">
@@ -53,7 +53,7 @@
                             Height="{TemplateBinding Height}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             Padding="{TemplateBinding Padding}"
-                            TextBlock.FontWeight="SemiBold"
+                            FontWeight="SemiBold"
                             HorizontalContentAlignment="Left"
                             VerticalContentAlignment="Center"
                             IsChecked="{Binding !IsMenuOpen, RelativeSource={RelativeSource Mode=TemplatedParent}}"
@@ -210,7 +210,7 @@
                   Margin="10,0,0,0"
                   VerticalAlignment="Center"
                   Grid.Column="3"/>
-            <Popup Name="PART_Popup" Width="200" PlacementMode="Left" StaysOpen="False"
+            <Popup Name="PART_Popup" Width="200" PlacementMode="Left" IsLightDismissEnabled="False"
                    IsOpen="{TemplateBinding IsSubMenuOpen, Mode=TwoWay}">
               <Border>
                 <ScrollViewer>

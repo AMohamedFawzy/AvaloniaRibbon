@@ -7,7 +7,6 @@
         </ResourceDictionary>
     </Styles.Resources>
     
-    <StyleInclude Source="/Styles/Fluent/Controls/Gallery.xaml" />
     <StyleInclude Source="/Styles/Fluent/Controls/Ribbon.xaml" />
     <StyleInclude Source="/Styles/Fluent/Controls/RibbonTab.xaml" />
     <StyleInclude Source="/Styles/Fluent/Controls/RibbonMenu.xaml" />

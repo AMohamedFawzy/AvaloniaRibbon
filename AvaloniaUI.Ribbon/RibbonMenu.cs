@@ -123,8 +123,8 @@ namespace AvaloniaUI.Ribbon
         {
             foreach (RibbonMenuItem item in Items.OfType<RibbonMenuItem>())
             {
-                item.PointerEnter -= Item_PointerEnter;
-                item.PointerEnter += Item_PointerEnter;
+                item.PointerEntered -= Item_PointerEnter;
+                item.PointerEntered += Item_PointerEnter;
             }
         }
 

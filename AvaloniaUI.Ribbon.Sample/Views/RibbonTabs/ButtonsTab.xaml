@@ -1,10 +1,9 @@
-﻿<ribbon:RibbonTab
+<ribbon:RibbonTab
     x:Class="AvaloniaUI.Ribbon.Samples.Views.ButtonsTab"
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:vm="clr-namespace:AvaloniaUI.Ribbon.Samples.ViewModels;assembly=AvaloniaUI.Ribbon.Sample"
     xmlns:ribbon="clr-namespace:AvaloniaUI.Ribbon;assembly=AvaloniaUI.Ribbon"
     mc:Ignorable="d"
     Header="Button Controls" ribbon:KeyTip.KeyTipKeys="B">

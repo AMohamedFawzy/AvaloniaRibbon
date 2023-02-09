@@ -59,10 +59,9 @@
                 MinWidth="{Binding Bounds.Width, RelativeSource={RelativeSource TemplatedParent}}"
                 IsOpen="{TemplateBinding IsDropDownOpen,
                                                      Mode=TwoWay}"
-                ObeyScreenEdges="True"
                 PlacementTarget="{Binding #toggle}"
-                StaysOpen="False" HorizontalOffset="-1">
-                <Border Background="{DynamicResource MenuFlyoutPresenterBackground}" BorderBrush="{DynamicResource MenuFlyoutPresenterBorderBrush}" BorderThickness="{DynamicResource MenuFlyoutPresenterBorderThemeThickness}" CornerRadius="{DynamicResource OverlayCornerRadius}" TextBlock.FontSize="{DynamicResource ContentControlFontSize}" Padding="{DynamicResource MenuFlyoutPresenterThemePadding}">
+                IsLightDismissEnabled="False" HorizontalOffset="-1">
+                <Border Background="{DynamicResource MenuFlyoutPresenterBackground}" BorderBrush="{DynamicResource MenuFlyoutPresenterBorderBrush}" BorderThickness="{DynamicResource MenuFlyoutPresenterBorderThemeThickness}" CornerRadius="{DynamicResource OverlayCornerRadius}" Padding="{DynamicResource MenuFlyoutPresenterThemePadding}">
                   <VisualLayerManager>
                     <ScrollViewer Classes="menuscroller">
                       <ItemsPresenter
@@ -110,10 +109,9 @@
                   MinWidth="{Binding Bounds.Width, RelativeSource={RelativeSource TemplatedParent}}"
                   IsOpen="{TemplateBinding IsDropDownOpen,
                                                      Mode=TwoWay}"
-                  ObeyScreenEdges="True"
                   PlacementTarget="{TemplateBinding}"
-                  StaysOpen="False">
-                  <Border Background="{DynamicResource MenuFlyoutPresenterBackground}" BorderBrush="{DynamicResource MenuFlyoutPresenterBorderBrush}" BorderThickness="{DynamicResource MenuFlyoutPresenterBorderThemeThickness}" CornerRadius="{DynamicResource OverlayCornerRadius}" TextBlock.FontSize="{DynamicResource ContentControlFontSize}" Padding="{DynamicResource MenuFlyoutPresenterThemePadding}">
+                  IsLightDismissEnabled="False">
+                  <Border Background="{DynamicResource MenuFlyoutPresenterBackground}" BorderBrush="{DynamicResource MenuFlyoutPresenterBorderBrush}" BorderThickness="{DynamicResource MenuFlyoutPresenterBorderThemeThickness}" CornerRadius="{DynamicResource OverlayCornerRadius}"  Padding="{DynamicResource MenuFlyoutPresenterThemePadding}">
                     <VisualLayerManager>
                       <ScrollViewer Classes="menuscroller">
                         <ItemsPresenter
@@ -162,10 +160,9 @@
                   MinWidth="{Binding Bounds.Width, RelativeSource={RelativeSource TemplatedParent}}"
                   IsOpen="{TemplateBinding IsDropDownOpen,
                                                      Mode=TwoWay}"
-                  ObeyScreenEdges="True"
                   PlacementTarget="{TemplateBinding}"
-                  StaysOpen="False">
-                  <Border Background="{DynamicResource MenuFlyoutPresenterBackground}" BorderBrush="{DynamicResource MenuFlyoutPresenterBorderBrush}" BorderThickness="{DynamicResource MenuFlyoutPresenterBorderThemeThickness}" CornerRadius="{DynamicResource OverlayCornerRadius}" TextBlock.FontSize="{DynamicResource ContentControlFontSize}" Padding="{DynamicResource MenuFlyoutPresenterThemePadding}">
+                  IsLightDismissEnabled="False">
+                  <Border Background="{DynamicResource MenuFlyoutPresenterBackground}" BorderBrush="{DynamicResource MenuFlyoutPresenterBorderBrush}" BorderThickness="{DynamicResource MenuFlyoutPresenterBorderThemeThickness}" CornerRadius="{DynamicResource OverlayCornerRadius}"  Padding="{DynamicResource MenuFlyoutPresenterThemePadding}">
                     <VisualLayerManager>
                       <ScrollViewer Classes="menuscroller">
                         <ItemsPresenter

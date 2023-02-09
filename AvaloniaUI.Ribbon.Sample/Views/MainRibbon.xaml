@@ -10,17 +10,16 @@
     xmlns:ribbon="clr-namespace:AvaloniaUI.Ribbon;assembly=AvaloniaUI.Ribbon"
     mc:Ignorable="d"
     HelpButtonCommand="{Binding HelpCommand}" IsCollapsed="{Binding IsRibbonCollapsed, Mode=TwoWay}">
-  <ribbon:Ribbon.Menu>
-    <v:MainRibbonMenu/>
-  </ribbon:Ribbon.Menu>
-  <ribbon:Ribbon.Tabs>
-    <v:HomeTab/>
-    <v:ButtonsTab/>
-    <v:IconTypesTab/>
-    <v:GalleriesTab/>
-    <ribbon:RibbonTab Header="Invisible tab" IsVisible="False"/>
-    <v:ContextualTabGroup1/>
-    <v:ContextualTabGroup2/>
-    <v:ContextualTabGroup3/>
-  </ribbon:Ribbon.Tabs>
+    <ribbon:Ribbon.Menu>
+        <v:MainRibbonMenu />
+    </ribbon:Ribbon.Menu>
+    <ribbon:Ribbon.Tabs>
+        <v:HomeTab />
+        <v:ButtonsTab />
+        <v:IconTypesTab />
+        <ribbon:RibbonTab Header="Invisible tab" IsVisible="False" />
+        <v:ContextualTabGroup1 />
+        <v:ContextualTabGroup2 />
+        <v:ContextualTabGroup3 />
+    </ribbon:Ribbon.Tabs>
 </ribbon:Ribbon>

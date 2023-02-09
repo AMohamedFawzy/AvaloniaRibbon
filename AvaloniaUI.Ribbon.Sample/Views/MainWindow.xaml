@@ -17,7 +17,8 @@
     TitleBarForeground="White"
     Icon="/Assets/avalonia-logo.ico"
     mc:Ignorable="d"
-    Orientation="{Binding RibbonOrientation}">
+    Orientation="{Binding RibbonOrientation}"
+    SystemDecorations="None">
   <ribbon:RibbonWindow.DataContext>
     <vm:MainWindowViewModel />
   </ribbon:RibbonWindow.DataContext>

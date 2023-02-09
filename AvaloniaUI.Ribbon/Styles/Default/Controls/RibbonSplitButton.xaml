@@ -58,9 +58,8 @@
                   MinWidth="{Binding Bounds.Width, RelativeSource={RelativeSource TemplatedParent}}"
                   IsOpen="{TemplateBinding IsDropDownOpen,
                                                      Mode=TwoWay}"
-                  ObeyScreenEdges="True"
                   PlacementTarget="{TemplateBinding}"
-                  StaysOpen="False" VerticalOffset="-1">
+                  IsLightDismissEnabled="False" VerticalOffset="-1">
                   <Border BorderBrush="{DynamicResource ThemeBorderMidBrush}" BorderThickness="1">
                     <VisualLayerManager>
                       <ScrollViewer>
@@ -108,9 +107,8 @@
                   MinWidth="{Binding Bounds.Width, RelativeSource={RelativeSource TemplatedParent}}"
                   IsOpen="{TemplateBinding IsDropDownOpen,
                                                      Mode=TwoWay}"
-                  ObeyScreenEdges="True"
                   PlacementTarget="{TemplateBinding}"
-                  StaysOpen="False" VerticalOffset="-1">
+                  IsLightDismissEnabled="False" VerticalOffset="-1">
                   <Border BorderBrush="{DynamicResource ThemeBorderMidBrush}" BorderThickness="1">
                     <VisualLayerManager>
                       <ScrollViewer>
@@ -165,9 +163,8 @@
                   MinWidth="{Binding Bounds.Width, RelativeSource={RelativeSource TemplatedParent}}"
                   IsOpen="{TemplateBinding IsDropDownOpen,
                                                      Mode=TwoWay}"
-                  ObeyScreenEdges="True"
                   PlacementTarget="{TemplateBinding}"
-                  StaysOpen="False" VerticalOffset="-1">
+                  IsLightDismissEnabled="False" VerticalOffset="-1">
                   <Border BorderBrush="{DynamicResource ThemeBorderMidBrush}" BorderThickness="1">
                     <VisualLayerManager>
                       <ScrollViewer>

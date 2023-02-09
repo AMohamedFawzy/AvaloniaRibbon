@@ -30,7 +30,7 @@
                 PlacementTarget="{Binding #QuickAccessToggle}"
                 PlacementMode="Bottom"
                 IsOpen="{Binding #QuickAccessToggle.IsChecked, Mode=TwoWay}"
-                StaysOpen="False">
+                IsLightDismissEnabled="False">
                 <Border Background="{DynamicResource ThemeBackgroundBrush}" BorderBrush="{DynamicResource ThemeBorderMidBrush}" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                   <ItemsPresenter
                       ItemTemplate="{Binding ItemTemplate}"
@@ -88,9 +88,8 @@
                 MinWidth="{Binding Bounds.Width, RelativeSource={RelativeSource TemplatedParent}}"
                 IsOpen="{TemplateBinding IsDropDownOpen,
                                                      Mode=TwoWay}"
-                ObeyScreenEdges="True"
                 PlacementTarget="{Binding #toggle}"
-                StaysOpen="False" HorizontalOffset="-1">
+                IsLightDismissEnabled="False" HorizontalOffset="-1">
                 <Border Background="{DynamicResource ThemeBackgroundBrush}" BorderBrush="{DynamicResource ThemeBorderMidBrush}" BorderThickness="1">
                   <VisualLayerManager>
                     <ScrollViewer>
@@ -139,9 +138,8 @@
                   MinWidth="{Binding Bounds.Width, RelativeSource={RelativeSource TemplatedParent}}"
                   IsOpen="{TemplateBinding IsDropDownOpen,
                                                      Mode=TwoWay}"
-                  ObeyScreenEdges="True"
                   PlacementTarget="{TemplateBinding}"
-                  StaysOpen="False">
+                  IsLightDismissEnabled="False">
                   <Border Background="{DynamicResource ThemeBackgroundBrush}" BorderBrush="{DynamicResource ThemeBorderMidBrush}" BorderThickness="1">
                     <VisualLayerManager>
                       <ScrollViewer>
@@ -191,9 +189,8 @@
                   MinWidth="{Binding Bounds.Width, RelativeSource={RelativeSource TemplatedParent}}"
                   IsOpen="{TemplateBinding IsDropDownOpen,
                                                      Mode=TwoWay}"
-                  ObeyScreenEdges="True"
                   PlacementTarget="{TemplateBinding}"
-                  StaysOpen="False">
+                  IsLightDismissEnabled="False">
                   <Border Background="{DynamicResource ThemeBackgroundBrush}" BorderBrush="{DynamicResource ThemeBorderMidBrush}" BorderThickness="1">
                     <VisualLayerManager>
                       <ScrollViewer>

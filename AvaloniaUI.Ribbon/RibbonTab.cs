@@ -19,7 +19,6 @@ namespace AvaloniaUI.Ribbon
         public static readonly DirectProperty<RibbonTab, ObservableCollection<RibbonGroupBox>> GroupsProperty = AvaloniaProperty.RegisterDirect<RibbonTab, ObservableCollection<RibbonGroupBox>>(nameof(Groups), o => o.Groups, (o, v) => o.Groups = v);
 
         private ObservableCollection<RibbonGroupBox> _groups = new ObservableCollection<RibbonGroupBox>();
-        [Content]
         public ObservableCollection<RibbonGroupBox> Groups
         {
             get { return _groups; }
